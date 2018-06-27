@@ -5,15 +5,15 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "dev": "nodemon ./index.js"
+    "dev": "nodemon index.js"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "jest": "^23.2.0"
+    "jest": "^23.2.0",
+    "nodemon": "1.17.4"
   },
   "dependencies": {
-    "nodemon": "^1.17.5",
     "body-parser": "^1.18.3",
     "cors": "^2.8.4",
     "dotenv": "^6.0.0",
