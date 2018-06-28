@@ -9,6 +9,7 @@ const logger = require('./middleware/logger')
 const authRouter = require('./auth/authRouter')
 const userRouter = require('./routes/userRouter')
 const bowtieRouter = require('./routes/bowtieRouter')
+const auth = require('./auth/authMiddleware')
 
 const app = new Express()
 
@@ -23,7 +24,7 @@ app.use(logger)
 // TODO: Create routes
 
 app.use('/api/auth', authRouter)
-app.use('/api/bowtie', bowtieRouter)
+app.use('/api/bowtie', auth.tokenHandler, bowtieRouter)
 
 
 // TODO: Run server
